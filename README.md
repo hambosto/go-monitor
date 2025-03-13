@@ -1,4 +1,4 @@
-# go-monitor
+# Go Monitor
 
 A modern terminal-based system monitoring tool written in Go, featuring a sleek and interactive terminal user interface.
 
