@@ -40,6 +40,31 @@ cd go-monitor
 go build ./cmd/go-monitor
 ```
 
+### Using Nix Flakes
+
+Add the flake to your inputs:
+
+```nix
+# In your flake.nix
+inputs = {
+  wallpaper-manager.url = "github:hambosto/go-monitor";
+};
+```
+
+#### NixOS/Home Manager
+
+Enable the module in your configuration:
+
+```nix
+# In your configuration.nix or home.nix
+{ inputs, ... }: {
+  imports = [
+    inputs.go-monitor.nixosModules.default
+  ];
+
+  programs.go-monitor.enable = true;
+}
+
 ## Usage
 
 Simply run the binary after installation:
